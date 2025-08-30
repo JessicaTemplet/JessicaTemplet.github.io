@@ -1,0 +1,616 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Jessica T. - Professional Copywriter</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Georgia', serif;
+            line-height: 1.6;
+            color: #2c3e50;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            min-height: 100vh;
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 20px;
+        }
+
+        .hero {
+            background: rgba(255, 255, 255, 0.95);
+            backdrop-filter: blur(10px);
+            padding: 4rem 0;
+            margin-bottom: 3rem;
+            box-shadow: 0 8px 32px rgba(0, 0, 0, 0.1);
+            position: relative;
+            overflow: hidden;
+        }
+
+        .hero::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background: linear-gradient(45deg, rgba(102, 126, 234, 0.1), rgba(118, 75, 162, 0.1));
+            pointer-events: none;
+        }
+
+        .hero-content {
+            display: grid;
+            grid-template-columns: 1fr 2fr;
+            gap: 3rem;
+            align-items: center;
+            position: relative;
+            z-index: 1;
+        }
+
+        .profile-photo {
+            width: 250px;
+            height: 250px;
+            border-radius: 50%;
+            object-fit: cover;
+            border: 6px solid white;
+            box-shadow: 0 20px 40px rgba(0, 0, 0, 0.2);
+            transition: transform 0.3s ease;
+        }
+
+        .profile-photo:hover {
+            transform: scale(1.05);
+        }
+
+        .hero-text h1 {
+            font-size: 3.5rem;
+            color: #2c3e50;
+            margin-bottom: 1rem;
+            font-weight: 300;
+            letter-spacing: -1px;
+        }
+
+        .tagline {
+            font-size: 1.4rem;
+            color: #7f8c8d;
+            font-style: italic;
+            margin-bottom: 1.5rem;
+        }
+
+        .hero-description {
+            font-size: 1.2rem;
+            color: #34495e;
+            margin-bottom: 2rem;
+            line-height: 1.7;
+        }
+
+        .nav {
+            display: flex;
+            justify-content: center;
+            gap: 1rem;
+            margin-top: 2rem;
+        }
+
+        .nav a {
+            color: #3498db;
+            text-decoration: none;
+            font-weight: 500;
+            padding: 0.8rem 1.5rem;
+            border-radius: 30px;
+            transition: all 0.3s ease;
+            border: 2px solid #3498db;
+        }
+
+        .nav a:hover, .nav a.active {
+            background: #3498db;
+            color: white;
+            transform: translateY(-2px);
+            box-shadow: 0 10px 25px rgba(52, 152, 219, 0.3);
+        }
+
+        .content {
+            background: rgba(255, 255, 255, 0.95);
+            backdrop-filter: blur(10px);
+            margin: 2rem auto;
+            padding: 3rem;
+            border-radius: 20px;
+            box-shadow: 0 20px 60px rgba(0, 0, 0, 0.1);
+        }
+
+        .section {
+            display: none;
+            animation: fadeIn 0.5s ease-in;
+        }
+
+        .section.active {
+            display: block;
+        }
+
+        @keyframes fadeIn {
+            from { opacity: 0; transform: translateY(20px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+
+        .section h2 {
+            color: #2c3e50;
+            font-size: 2.5rem;
+            margin-bottom: 2rem;
+            text-align: center;
+            position: relative;
+        }
+
+        .section h2::after {
+            content: '';
+            display: block;
+            width: 80px;
+            height: 3px;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            margin: 1rem auto;
+            border-radius: 2px;
+        }
+
+        .about-content {
+            font-size: 1.15rem;
+            line-height: 1.8;
+            margin-bottom: 3rem;
+            text-align: center;
+            max-width: 800px;
+            margin-left: auto;
+            margin-right: auto;
+        }
+
+        .stats-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 2rem;
+            margin: 3rem 0;
+        }
+
+        .stat-card {
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            color: white;
+            padding: 2rem;
+            border-radius: 15px;
+            text-align: center;
+            transform: translateY(0);
+            transition: transform 0.3s ease;
+        }
+
+        .stat-card:hover {
+            transform: translateY(-10px);
+        }
+
+        .stat-number {
+            font-size: 2.5rem;
+            font-weight: bold;
+            display: block;
+        }
+
+        .stat-label {
+            font-size: 1rem;
+            opacity: 0.9;
+            margin-top: 0.5rem;
+        }
+
+        .portfolio-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(400px, 1fr));
+            gap: 2.5rem;
+            margin-top: 3rem;
+        }
+
+        .portfolio-item {
+            background: #f8f9fa;
+            padding: 2.5rem;
+            border-radius: 20px;
+            box-shadow: 0 15px 35px rgba(0, 0, 0, 0.1);
+            transition: all 0.3s ease;
+            border-left: 5px solid transparent;
+        }
+
+        .portfolio-item:hover {
+            transform: translateY(-8px);
+            box-shadow: 0 25px 50px rgba(0, 0, 0, 0.15);
+            border-left-color: #3498db;
+        }
+
+        .portfolio-item h3 {
+            color: #2c3e50;
+            font-size: 1.5rem;
+            margin-bottom: 1rem;
+            position: relative;
+        }
+
+        .portfolio-item .category {
+            font-size: 0.9rem;
+            color: white;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            padding: 0.3rem 1rem;
+            border-radius: 20px;
+            display: inline-block;
+            margin-bottom: 1rem;
+            font-weight: 500;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+        }
+
+        .sample-text {
+            background: #fff;
+            padding: 1.5rem;
+            border-radius: 10px;
+            border-left: 4px solid #3498db;
+            margin: 1rem 0;
+            font-style: italic;
+            font-size: 1.05rem;
+            line-height: 1.6;
+        }
+
+        .contact-section {
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            color: white;
+            padding: 4rem 2rem;
+            border-radius: 20px;
+            text-align: center;
+            margin-top: 3rem;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .contact-section::before {
+            content: '';
+            position: absolute;
+            top: -50%;
+            left: -50%;
+            width: 200%;
+            height: 200%;
+            background: repeating-linear-gradient(
+                45deg,
+                transparent,
+                transparent 10px,
+                rgba(255,255,255,0.03) 10px,
+                rgba(255,255,255,0.03) 20px
+            );
+            animation: drift 20s linear infinite;
+        }
+
+        @keyframes drift {
+            0% { transform: rotate(0deg); }
+            100% { transform: rotate(360deg); }
+        }
+
+        .contact-content {
+            position: relative;
+            z-index: 1;
+        }
+
+        .contact-section h3 {
+            font-size: 2.2rem;
+            margin-bottom: 1rem;
+        }
+
+        .contact-details {
+            font-size: 1.2rem;
+            margin: 1.5rem 0;
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 1rem;
+            max-width: 600px;
+            margin-left: auto;
+            margin-right: auto;
+        }
+
+        .contact-item {
+            background: rgba(255, 255, 255, 0.1);
+            padding: 1rem;
+            border-radius: 10px;
+            backdrop-filter: blur(10px);
+        }
+
+        .cta-button {
+            display: inline-block;
+            background: white;
+            color: #667eea;
+            padding: 1.2rem 2.5rem;
+            border-radius: 50px;
+            text-decoration: none;
+            font-weight: 600;
+            margin-top: 2rem;
+            transition: all 0.3s ease;
+            font-size: 1.1rem;
+        }
+
+        .cta-button:hover {
+            transform: scale(1.05);
+            box-shadow: 0 15px 30px rgba(0, 0, 0, 0.2);
+        }
+
+        .floating-elements {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            pointer-events: none;
+            z-index: -1;
+        }
+
+        .floating-element {
+            position: absolute;
+            opacity: 0.1;
+            animation: float 6s ease-in-out infinite;
+        }
+
+        .floating-element:nth-child(1) {
+            top: 20%;
+            left: 10%;
+            animation-delay: 0s;
+        }
+
+        .floating-element:nth-child(2) {
+            top: 50%;
+            right: 10%;
+            animation-delay: 2s;
+        }
+
+        .floating-element:nth-child(3) {
+            bottom: 20%;
+            left: 20%;
+            animation-delay: 4s;
+        }
+
+        @keyframes float {
+            0%, 100% { transform: translateY(0px); }
+            50% { transform: translateY(-20px); }
+        }
+
+        @media (max-width: 768px) {
+            .hero-content {
+                grid-template-columns: 1fr;
+                text-align: center;
+                gap: 2rem;
+            }
+
+            .profile-photo {
+                width: 200px;
+                height: 200px;
+                margin: 0 auto;
+            }
+
+            .hero-text h1 {
+                font-size: 2.5rem;
+            }
+
+            .tagline {
+                font-size: 1.2rem;
+            }
+
+            .nav {
+                flex-direction: column;
+                gap: 1rem;
+            }
+
+            .portfolio-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .stats-grid {
+                grid-template-columns: repeat(2, 1fr);
+            }
+
+            .content {
+                padding: 2rem;
+                margin: 1rem auto;
+            }
+
+            .contact-details {
+                grid-template-columns: 1fr;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="floating-elements">
+        <div class="floating-element">✍️</div>
+        <div class="floating-element">💡</div>
+        <div class="floating-element">📝</div>
+    </div>
+
+    <div class="hero">
+        <div class="container">
+            <div class="hero-content">
+                <div style="text-align: center;">
+                    <img src="professional-photo-placeholder.jpg" alt="Jessica T. - Professional Copywriter" class="profile-photo" id="profilePhoto">
+                </div>
+                <div class="hero-text">
+                    <h1>Jessica T.</h1>
+                    <p class="tagline">Strategic Copywriter • Helping Businesses Say What They Mean</p>
+                    <p class="hero-description">I write copy that sounds like you, not like a template. Whether you need crisp and corporate or warm and witty, I help businesses turn browsers into buyers with clean, compelling content.</p>
+                    <nav class="nav">
+                        <a href="#" onclick="showSection('about')" class="active">About</a>
+                        <a href="#" onclick="showSection('portfolio')">Portfolio</a>
+                        <a href="#" onclick="showSection('contact')">Let's Talk</a>
+                    </nav>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="container">
+        <div class="content">
+            <div id="about" class="section active">
+                <h2>About Jessica</h2>
+                <div class="about-content">
+                    <p>I'm a freelance copywriter who helps businesses say what they mean—clearly, confidently, and in a voice that fits their brand. I specialize in writing website content that's sharp, strategic, and tailored to your brand's unique voice.</p>
+                    
+                    <p>With a Bachelor's in Business (Magna Cum Laude) from Louisiana State University, I understand the strategic side of content. My goal is always to make sure your message connects with your audience and supports your bottom line.</p>
+                    
+                    <p>I'm deadline-driven, detail-oriented, and easy to collaborate with. From product pages to blog posts, I help businesses create content that actually converts.</p>
+                </div>
+
+                <div class="stats-grid">
+                    <div class="stat-card">
+                        <span class="stat-number">5+</span>
+                        <div class="stat-label">Years Experience</div>
+                    </div>
+                    <div class="stat-card">
+                        <span class="stat-number">$30</span>
+                        <div class="stat-label">Per Hour</div>
+                    </div>
+                    <div class="stat-card">
+                        <span class="stat-number">30+</span>
+                        <div class="stat-label">Hours/Week Available</div>
+                    </div>
+                    <div class="stat-card">
+                        <span class="stat-number">100%</span>
+                        <div class="stat-label">Client Satisfaction</div>
+                    </div>
+                </div>
+            </div>
+
+            <div id="portfolio" class="section">
+                <h2>Portfolio Samples</h2>
+                <div class="portfolio-grid">
+                    <div class="portfolio-item">
+                        <div class="category">Homepage Copy</div>
+                        <h3>Tech Startup Landing Page</h3>
+                        <p><strong>Challenge:</strong> B2B SaaS startup needed homepage copy that explained complex project management software in simple terms while establishing credibility.</p>
+                        
+                        <div class="sample-text">
+                            "Finally, project management that doesn't manage you. StreamFlow turns chaos into clarity with intelligent automation that actually learns how your team works. No more drowning in notifications or hunting through endless folders—just the right information, delivered to the right people, at exactly the right time."
+                        </div>
+                        
+                        <p><strong>Result:</strong> Clean, benefit-focused copy that speaks to pain points without overwhelming technical jargon. Positions the product as a solution to real frustrations.</p>
+                    </div>
+
+                    <div class="portfolio-item">
+                        <div class="category">E-commerce</div>
+                        <h3>Artisan Coffee Brand</h3>
+                        <p><strong>Challenge:</strong> Premium coffee roaster needed product descriptions that justified higher prices while appealing to coffee enthusiasts.</p>
+                        
+                        <div class="sample-text">
+                            "This isn't just coffee—it's your morning ritual elevated. Our Ethiopian single-origin beans are hand-selected from high-altitude farms where coffee grows slowly, developing the complex flavors that make your first sip feel like discovering something extraordinary. Each bag delivers notes of dark chocolate and bright citrus that'll make your kitchen smell like the world's best café."
+                        </div>
+                        
+                        <p><strong>Result:</strong> Sensory-rich copy that creates desire and justifies premium pricing through storytelling and specific details.</p>
+                    </div>
+
+                    <div class="portfolio-item">
+                        <div class="category">Service Page</div>
+                        <h3>Local Law Firm</h3>
+                        <p><strong>Challenge:</strong> Personal injury law firm wanted to sound approachable and trustworthy without typical lawyer stereotypes.</p>
+                        
+                        <div class="sample-text">
+                            "When life takes an unexpected turn, you need someone who listens first and fights second. We know you didn't plan to be here, reading about personal injury lawyers on a Tuesday afternoon. But here you are, and we're here to help. No legal jargon, no pressure tactics—just straight talk about your options and what comes next."
+                        </div>
+                        
+                        <p><strong>Result:</strong> Empathetic, human-centered copy that acknowledges the emotional context while building trust and authority.</p>
+                    </div>
+
+                    <div class="portfolio-item">
+                        <div class="category">Blog Content</div>
+                        <h3>Marketing Agency Thought Leadership</h3>
+                        <p><strong>Challenge:</strong> Digital marketing agency needed blog content that demonstrated expertise while being accessible to business owners.</p>
+                        
+                        <div class="sample-text">
+                            "Your website analytics are lying to you. Well, not exactly lying—but they're definitely not telling you the whole truth. That spike in traffic last month? Great! But if those visitors bounced faster than a rubber ball, you've got a content problem, not a traffic celebration."
+                        </div>
+                        
+                        <p><strong>Result:</strong> Engaging, conversational tone that hooks readers while delivering valuable insights. Positions the agency as knowledgeable but approachable.</p>
+                    </div>
+
+                    <div class="portfolio-item">
+                        <div class="category">Email Marketing</div>
+                        <h3>Fitness Studio Welcome Series</h3>
+                        <p><strong>Challenge:</strong> Boutique fitness studio needed welcome emails that built community feeling and encouraged class bookings.</p>
+                        
+                        <div class="sample-text">
+                            <strong>Subject: "You're in (and we're excited)"</strong><br><br>
+                            "Welcome to the Studio! We know starting something new can feel intimidating—even something as simple as a fitness class. Here's the thing: we've all been the person who showed up not knowing what to expect. That's exactly why we built this place to feel like the opposite of intimidating."
+                        </div>
+                        
+                        <p><strong>Result:</strong> Warm, inclusive tone that addresses common concerns while encouraging action. Builds personal connection from the first touchpoint.</p>
+                    </div>
+
+                    <div class="portfolio-item">
+                        <div class="category">About Page</div>
+                        <h3>Consulting Firm Founder</h3>
+                        <p><strong>Challenge:</strong> Solo consultant needed an About page that built authority while staying relatable and avoiding corporate speak.</p>
+                        
+                        <div class="sample-text">
+                            "I spent fifteen years in corporate strategy watching smart people make decisions based on gut feelings and outdated spreadsheets. Now I help businesses make decisions based on actual data and clear thinking. It's not about having all the answers—it's about asking better questions and knowing where to look for what you need."
+                        </div>
+                        
+                        <p><strong>Result:</strong> Personal but professional tone that establishes credibility through experience while positioning the consultant as a practical problem-solver.</p>
+                    </div>
+                </div>
+            </div>
+
+            <div id="contact" class="section">
+                <h2>Let's Work Together</h2>
+                <div class="contact-section">
+                    <div class="contact-content">
+                        <h3>Ready to Transform Your Message?</h3>
+                        <p style="font-size: 1.3rem; margin: 2rem 0; line-height: 1.6;">I help businesses turn browsers into buyers with copy that's sharp, strategic, and tailored to your unique brand voice. Let's create content that actually works.</p>
+                        
+                        <div class="contact-details">
+                            <div class="contact-item">
+                                <strong>Rate</strong><br>$30/hour
+                            </div>
+                            <div class="contact-item">
+                                <strong>Availability</strong><br>30+ hours/week
+                            </div>
+                            <div class="contact-item">
+                                <strong>Education</strong><br>Business Degree (Magna Cum Laude)
+                            </div>
+                            <div class="contact-item">
+                                <strong>Experience</strong><br>5+ Years Copywriting
+                            </div>
+                        </div>
+                        
+                        <a href="#" class="cta-button">Hire Me on Upwork</a>
+                        
+                        <p style="margin-top: 2rem; font-size: 1.1rem; opacity: 0.9;">I'm deadline-driven, detail-oriented, and easy to collaborate with. Let's chat if you're looking for smart, engaging copy that actually works.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        function showSection(sectionId) {
+            // Hide all sections
+            const sections = document.querySelectorAll('.section');
+            sections.forEach(section => {
+                section.classList.remove('active');
+            });
+            
+            // Show selected section
+            document.getElementById(sectionId).classList.add('active');
+            
+            // Update nav styling
+            const navLinks = document.querySelectorAll('.nav a');
+            navLinks.forEach(link => {
+                link.classList.remove('active');
+                link.style.background = 'transparent';
+                link.style.color = '#3498db';
+            });
+            
+            event.target.classList.add('active');
+        }
+
+        // Handle photo upload placeholder
+        document.addEventListener('DOMContentLoaded', function() {
+            const photoElement = document.getElementById('profilePhoto');
+            // This is where you'll replace with your actual photo URL once uploaded to GitHub
+            photoElement.src = 'data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iMjUwIiBoZWlnaHQ9IjI1MCIgdmlld0JveD0iMCAwIDI1MCAyNTAiIGZpbGw9Im5vbmUiIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyI+CjxyZWN0IHdpZHRoPSIyNTAiIGhlaWdodD0iMjUwIiBmaWxsPSIjRjBGMEYwIi8+Cjx0ZXh0IHg9IjEyNSIgeT0iMTI1IiB0ZXh0LWFuY2hvcj0ibWlkZGxlIiBkeT0iLjNlbSIgZm9udC1mYW1pbHk9InNhbnMtc2VyaWYiIGZvbnQtc2l6ZT0iMTQiIGZpbGw9IiM5OTk5OTkiPlVwbG9hZCBZb3VyIFBob3RvPC90ZXh0Pgo8L3N2Zz4K';
+        });
+    </script>
+</body>
+</html>
