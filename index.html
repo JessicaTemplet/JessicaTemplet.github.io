@@ -426,7 +426,7 @@
         <div class="container">
             <div class="hero-content">
                 <div style="text-align: center;">
-                    <img src="professional-photo-placeholder.jpg" alt="Jessica T. - Professional Copywriter" class="profile-photo" id="profilePhoto">
+                    <img src="professional-photo-placeholder.jpg" alt="Jessica T. - Professional Copywriter" class="profile-photo">
                 </div>
                 <div class="hero-text">
                     <h1>Jessica T.</h1>
@@ -605,11 +605,9 @@
             event.target.classList.add('active');
         }
 
-        // Handle photo upload placeholder
+        // Photo will load from uploaded file
         document.addEventListener('DOMContentLoaded', function() {
-            const photoElement = document.getElementById('profilePhoto');
-            // This is where you'll replace with your actual photo URL once uploaded to GitHub
-            photoElement.src = 'data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iMjUwIiBoZWlnaHQ9IjI1MCIgdmlld0JveD0iMCAwIDI1MCAyNTAiIGZpbGw9Im5vbmUiIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyI+CjxyZWN0IHdpZHRoPSIyNTAiIGhlaWdodD0iMjUwIiBmaWxsPSIjRjBGMEYwIi8+Cjx0ZXh0IHg9IjEyNSIgeT0iMTI1IiB0ZXh0LWFuY2hvcj0ibWlkZGxlIiBkeT0iLjNlbSIgZm9udC1mYW1pbHk9InNhbnMtc2VyaWYiIGZvbnQtc2l6ZT0iMTQiIGZpbGw9IiM5OTk5OTkiPlVwbG9hZCBZb3VyIFBob3RvPC90ZXh0Pgo8L3N2Zz4K';
+            // Photo loads automatically from professional-photo-placeholder.jpg
         });
     </script>
 </body>
