@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+<!DOCTYPE html><!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
@@ -340,6 +340,117 @@
             </div>
 
             <div id="portfolio" class="section">
+                <h2>Portfolio Samples</h2>
+                <div class="portfolio-grid">
+                    <div class="portfolio-item">
+                        <div class="category">Brand Messaging & Homepage</div>
+                        <h3>SaaS Homepage: A Better Way to Collaborate</h3>
+                        <p><strong>Challenge:</strong> A new project management software called "ShiftFlow" needed to differentiate itself from competitors like Asana and Trello. The goal was to attract creative teams who felt bogged down by overly complex, corporate-style tools. The copy had to feel intuitive and human, not technical.</p>
+                        
+                        <div class="sample-text">
+                            "Finally, project management that works the way you do. No more drowning in notifications or hunting through endless folders. ShiftFlow organizes your team, not just your tasks, with intuitive automation that actually learns how your team works. It's the right information, delivered to the right person, at exactly the right time. So you can get back to creating."
+                        </div>
+                        
+                        <p><strong>Result:</strong> This copy repositions a complex tool as a simple, elegant solution. By focusing on the user's frustration ("drowning in notifications") and connecting the product to a positive outcome ("get back to creating"), it establishes an emotional connection with the target audience and positions the brand as a partner, not just a product.</p>
+                    </div>
+
+                    <div class="portfolio-item">
+                        <div class="category">E-commerce Product Descriptions</div>
+                        <h3>Artisan Coffee Brand: Single-Origin Peruvian Beans</h3>
+                        <p><strong>Challenge:</strong> A premium, small-batch coffee roaster wanted to justify a higher price point for its "Cusco Valley" beans. The product description needed to appeal to coffee connoisseurs and a new audience of home brewers looking for a high-end experience, moving beyond a simple list of tasting notes to a sensory story.</p>
+                        
+                        <div class="sample-text">
+                            "Escape to the Andes with every sip. Our Cusco Valley beans are hand-selected from small, family-run farms high in the Peruvian mountains. Grown in rich volcanic soil, they develop a complex profile of nutty sweetness with hints of dark chocolate and bright citrus. This isn't just coffee, it's a moment of mindful escape, a rich and aromatic ritual that makes your kitchen smell like the world's best café."
+                        </div>
+                        
+                        <p><strong>Result:</strong> This copy uses storytelling to create a premium experience. By appealing to the senses and painting a vivid picture of the coffee's origin, it transforms a simple product description into an enticing invitation, encouraging customers to invest in a superior experience rather than just buying coffee.</p>
+                    </div>
+
+                    <div class="portfolio-item">
+                        <div class="category">Thought Leadership Blog Post</div>
+                        <h3>Digital Marketing Agency: "Your Website Analytics are Lying"</h3>
+                        <p><strong>Challenge:</strong> A digital marketing agency needed to produce blog content that would establish its founder as a thought leader in the industry. The goal was to attract business owners who were skeptical about marketing data, using an engaging, accessible tone to demonstrate the agency’s unique and trustworthy approach.</p>
+                        
+                        <div class="sample-text">
+                            "Your website analytics are lying to you. Well, not exactly lying, but they're definitely not telling you the whole truth. That massive spike in traffic last month? Wonderful! But if those new visitors bounced faster than a rubber ball, you don't have a traffic celebration, you have a serious content problem. You're bringing people to a party they don't want to attend. We help you fix that."
+                        </div>
+                        
+                        <p><strong>Result:</strong> This conversational and slightly provocative opening immediately grabs attention. It simplifies a complex topic and speaks directly to a common business pain point. The copy establishes authority and empathy simultaneously, positioning the agency as a wise, no-nonsense partner who can solve a real problem.</p>
+                    </div>
+
+                    <div class="portfolio-item">
+                        <div class="category">Service Page: Legal Services</div>
+                        <h3>Local Law Firm: Personal Injury</h3>
+                        <p><strong>Challenge:</strong> A personal injury law firm in a small community needed a service page that felt approachable and trustworthy. The goal was to build confidence with clients who might be intimidated by the legal process, avoiding overly formal or aggressive language.</p>
+                        
+                        <div class="sample-text">
+                            "When life takes an unexpected turn, you need someone who listens first and fights second. We know you didn't plan to be here, reading about personal injury on a Tuesday afternoon. But here you are, and we're here to help. No legal jargon, no pressure tactics, just straight talk about your options and what comes next. We're your neighbors, and we're ready to stand by your side."
+                        </div>
+                        
+                        <p><strong>Result:</strong> By starting with an empathetic, human-centered approach, this copy immediately builds trust. It acknowledges the client's emotional state and demystifies the legal process. The line "We're your neighbors" reinforces the local, community-focused brand identity, making the firm feel more reliable and less intimidating.</p>
+                    </div>
+                </div>
+            </div>
+
+            <div id="contact" class="section">
+                <h2>Let's Work Together</h2>
+                <div class="contact-section">
+                    <div class="contact-content">
+                        <h3>Ready to Transform Your Message?</h3>
+                        <p style="font-size: 1.3rem; margin: 2rem 0; line-height: 1.6;">I help businesses turn browsers into buyers with copy that's sharp, strategic, and tailored to your unique brand voice. Let's create content that actually works.</p>
+                        
+                        <div class="contact-details">
+                            <div class="contact-item">
+                                <strong>Rate</strong><br>$30/hour
+                            </div>
+                            <div class="contact-item">
+                                <strong>Availability</strong><br>30+ hours/week
+                            </div>
+                            <div class="contact-item">
+                                <strong>Education</strong><br>Business Degree (Magna Cum Laude)
+                            </div>
+                            <div class="contact-item">
+                                <strong>Experience</strong><br>5+ Years Copywriting
+                            </div>
+                        </div>
+                        
+                        <a href="#" class="cta-button">Hire Me on Upwork</a>
+                        
+                        <p style="margin-top: 2rem; font-size: 1.1rem; opacity: 0.9;">I'm deadline-driven, detail-oriented, and easy to collaborate with. Let's chat if you're looking for smart, engaging copy that actually works.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        function showSection(sectionId) {
+            // Hide all sections
+            const sections = document.querySelectorAll('.section');
+            sections.forEach(section => {
+                section.classList.remove('active');
+            });
+            
+            // Show selected section
+            document.getElementById(sectionId).classList.add('active');
+            
+            // Update nav styling
+            const navLinks = document.querySelectorAll('.nav a');
+            navLinks.forEach(link => {
+                link.classList.remove('active');
+            });
+            
+            event.target.classList.add('active');
+        }
+
+        // Photo will load from uploaded file
+        document.addEventListener('DOMContentLoaded', function() {
+            // The image will be loaded from the professional-photo-placeholder.jpg file
+        });
+    </script>
+</body>
+</html>
+   <div id="portfolio" class="section">
                 <h2>Portfolio Samples</h2>
                 <div class="portfolio-grid">
                     <div class="portfolio-item">
