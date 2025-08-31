@@ -1,3 +1,4 @@
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -14,9 +15,17 @@
         body {
             font-family: 'Georgia', serif;
             line-height: 1.6;
-            color: #2c3e50;
-            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            color: #404040; /* Updated color */
+            background: linear-gradient(270deg, #f0f4f8, #e0e8f0); /* Updated color */
+            background-size: 400% 400%;
+            animation: gradientShift 15s ease infinite;
             min-height: 100vh;
+        }
+
+        @keyframes gradientShift {
+            0% { background-position: 0% 50%; }
+            50% { background-position: 100% 50%; }
+            100% { background-position: 0% 50%; }
         }
 
         .container {
@@ -42,7 +51,7 @@
             left: 0;
             right: 0;
             bottom: 0;
-            background: linear-gradient(45deg, rgba(102, 126, 234, 0.1), rgba(118, 75, 162, 0.1));
+            background: linear-gradient(45deg, rgba(200, 220, 240, 0.1), rgba(150, 170, 190, 0.1));
             pointer-events: none;
         }
 
@@ -82,6 +91,25 @@
             color: #7f8c8d;
             font-style: italic;
             margin-bottom: 1.5rem;
+            display: inline-block;
+        }
+        
+        #typewriter-text {
+            border-right: 2px solid #7f8c8d;
+            white-space: nowrap;
+            overflow: hidden;
+            animation: typing 3s steps(40, end) infinite,
+                       blink-caret 0.75s step-end infinite;
+        }
+        
+        @keyframes typing {
+            from { width: 0 }
+            to { width: 100% }
+        }
+        
+        @keyframes blink-caret {
+            from, to { border-color: transparent }
+            50% { border-color: #7f8c8d; }
         }
 
         .hero-description {
@@ -94,25 +122,25 @@
         .nav {
             display: flex;
             justify-content: center;
-            gap: 1rem;
+            gap: 1.5rem; /* Increased gap */
             margin-top: 2rem;
         }
 
         .nav a {
-            color: #3498db;
+            color: #556080; /* Updated color */
             text-decoration: none;
             font-weight: 500;
-            padding: 0.8rem 1.5rem;
-            border-radius: 30px;
+            padding: 0.8rem 1.8rem; /* Increased padding */
+            border-radius: 8px; /* New button shape */
             transition: all 0.3s ease;
-            border: 2px solid #3498db;
+            border: 2px solid #556080; /* Updated color */
         }
 
         .nav a:hover, .nav a.active {
-            background: #3498db;
+            background: #556080; /* Updated color */
             color: white;
             transform: translateY(-2px);
-            box-shadow: 0 10px 25px rgba(52, 152, 219, 0.3);
+            box-shadow: 0 10px 25px rgba(85, 96, 128, 0.3); /* Updated color */
         }
 
         .content {
@@ -151,7 +179,7 @@
             display: block;
             width: 80px;
             height: 3px;
-            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            background: linear-gradient(135deg, #556080 0%, #708090 100%); /* Updated colors */
             margin: 1rem auto;
             border-radius: 2px;
         }
@@ -174,7 +202,7 @@
         }
 
         .stat-card {
-            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            background: linear-gradient(135deg, #556080 0%, #708090 100%); /* Updated colors */
             color: white;
             padding: 2rem;
             border-radius: 15px;
@@ -213,12 +241,33 @@
             box-shadow: 0 15px 35px rgba(0, 0, 0, 0.1);
             transition: all 0.3s ease;
             border-left: 5px solid transparent;
+            position: relative;
+            overflow: hidden;
+            z-index: 1;
+        }
+
+        .portfolio-item::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: linear-gradient(135deg, rgba(85, 96, 128, 0.1), rgba(112, 128, 144, 0.1));
+            transform: scaleX(0);
+            transform-origin: left;
+            transition: transform 0.4s ease;
+            z-index: -1;
+        }
+
+        .portfolio-item:hover::before {
+            transform: scaleX(1);
         }
 
         .portfolio-item:hover {
             transform: translateY(-8px);
             box-shadow: 0 25px 50px rgba(0, 0, 0, 0.15);
-            border-left-color: #3498db;
+            border-left-color: #556080; /* Updated color */
         }
 
         .portfolio-item h3 {
@@ -231,7 +280,7 @@
         .portfolio-item .category {
             font-size: 0.9rem;
             color: white;
-            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            background: linear-gradient(135deg, #556080 0%, #708090 100%); /* Updated colors */
             padding: 0.3rem 1rem;
             border-radius: 20px;
             display: inline-block;
@@ -245,7 +294,7 @@
             background: #fff;
             padding: 1.5rem;
             border-radius: 10px;
-            border-left: 4px solid #3498db;
+            border-left: 4px solid #556080; /* Updated color */
             margin: 1rem 0;
             font-style: italic;
             font-size: 1.05rem;
@@ -253,7 +302,7 @@
         }
 
         .contact-section {
-            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            background: linear-gradient(135deg, #556080 0%, #708090 100%); /* Updated colors */
             color: white;
             padding: 4rem 2rem;
             border-radius: 20px;
@@ -316,9 +365,9 @@
         .cta-button {
             display: inline-block;
             background: white;
-            color: #667eea;
+            color: #556080; /* Updated color */
             padding: 1.2rem 2.5rem;
-            border-radius: 50px;
+            border-radius: 8px; /* New button shape */
             text-decoration: none;
             font-weight: 600;
             margin-top: 2rem;
@@ -430,7 +479,9 @@
                 </div>
                 <div class="hero-text">
                     <h1>Jessica T.</h1>
-                    <p class="tagline">Strategic Copywriter • Helping Businesses Say What They Mean</p>
+                    <p class="tagline">
+                        <span id="typewriter-text">Strategic Copywriter. Helping Businesses Say What They Mean.</span>
+                    </p>
                     <p class="hero-description">I write copy that sounds like you, not like a template. Whether you need crisp and corporate or warm and witty, I help businesses turn browsers into buyers with clean, compelling content.</p>
                     <nav class="nav">
                         <a href="#" onclick="showSection('about')" class="active">About</a>
@@ -447,7 +498,7 @@
             <div id="about" class="section active">
                 <h2>About Jessica</h2>
                 <div class="about-content">
-                    <p>I'm a freelance copywriter who helps businesses say what they mean—clearly, confidently, and in a voice that fits their brand. I specialize in writing website content that's sharp, strategic, and tailored to your brand's unique voice.</p>
+                    <p>I'm a freelance copywriter who helps businesses say what they mean, clearly, confidently, and in a voice that fits their brand. I specialize in writing website content that's sharp, strategic, and tailored to your brand's unique voice.</p>
                     
                     <p>With a Bachelor's in Business (Magna Cum Laude) from Louisiana State University, I understand the strategic side of content. My goal is always to make sure your message connects with your audience and supports your bottom line.</p>
                     
@@ -478,137 +529,34 @@
                 <h2>Portfolio Samples</h2>
                 <div class="portfolio-grid">
                     <div class="portfolio-item">
-                        <div class="category">Homepage Copy</div>
-                        <h3>Tech Startup Landing Page</h3>
-                        <p><strong>Challenge:</strong> B2B SaaS startup needed homepage copy that explained complex project management software in simple terms while establishing credibility.</p>
+                        <div class="category">Brand Messaging & Homepage</div>
+                        <h3>SaaS Homepage: A Better Way to Collaborate</h3>
+                        <p><strong>Challenge:</strong> A new project management software called "ShiftFlow" needed to differentiate itself from competitors like Asana and Trello. The goal was to attract creative teams who felt bogged down by overly complex, corporate-style tools. The copy had to feel intuitive and human, not technical.</p>
                         
                         <div class="sample-text">
-                            "Finally, project management that doesn't manage you. StreamFlow turns chaos into clarity with intelligent automation that actually learns how your team works. No more drowning in notifications or hunting through endless folders—just the right information, delivered to the right people, at exactly the right time."
+                            "Finally, project management that works the way you do. No more drowning in notifications or hunting through endless folders. ShiftFlow organizes your team, not just your tasks, with intuitive automation that actually learns how your team works. It's the right information, delivered to the right person, at exactly the right time. So you can get back to creating."
                         </div>
                         
-                        <p><strong>Result:</strong> Clean, benefit-focused copy that speaks to pain points without overwhelming technical jargon. Positions the product as a solution to real frustrations.</p>
+                        <p><strong>Result:</strong> This copy repositions a complex tool as a simple, elegant solution. By focusing on the user's frustration ("drowning in notifications") and connecting the product to a positive outcome ("get back to creating"), it establishes an emotional connection with the target audience and positions the brand as a partner, not just a product.</p>
                     </div>
 
                     <div class="portfolio-item">
-                        <div class="category">E-commerce</div>
-                        <h3>Artisan Coffee Brand</h3>
-                        <p><strong>Challenge:</strong> Premium coffee roaster needed product descriptions that justified higher prices while appealing to coffee enthusiasts.</p>
+                        <div class="category">E-commerce Product Descriptions</div>
+                        <h3>Artisan Coffee Brand: Single-Origin Peruvian Beans</h3>
+                        <p><strong>Challenge:</strong> A premium, small-batch coffee roaster wanted to justify a higher price point for its "Cusco Valley" beans. The product description needed to appeal to coffee connoisseurs and a new audience of home brewers looking for a high-end experience, moving beyond a simple list of tasting notes to a sensory story.</p>
                         
                         <div class="sample-text">
-                            "This isn't just coffee—it's your morning ritual elevated. Our Ethiopian single-origin beans are hand-selected from high-altitude farms where coffee grows slowly, developing the complex flavors that make your first sip feel like discovering something extraordinary. Each bag delivers notes of dark chocolate and bright citrus that'll make your kitchen smell like the world's best café."
+                            "Escape to the Andes with every sip. Our Cusco Valley beans are hand-selected from small, family-run farms high in the Peruvian mountains. Grown in rich volcanic soil, they develop a complex profile of nutty sweetness with hints of dark chocolate and bright citrus. This isn't just coffee, it's a moment of mindful escape, a rich and aromatic ritual that makes your kitchen smell like the world's best café."
                         </div>
                         
-                        <p><strong>Result:</strong> Sensory-rich copy that creates desire and justifies premium pricing through storytelling and specific details.</p>
+                        <p><strong>Result:</strong> This copy uses storytelling to create a premium experience. By appealing to the senses and painting a vivid picture of the coffee's origin, it transforms a simple product description into an enticing invitation, encouraging customers to invest in a superior experience rather than just buying coffee.</p>
                     </div>
 
                     <div class="portfolio-item">
-                        <div class="category">Service Page</div>
-                        <h3>Local Law Firm</h3>
-                        <p><strong>Challenge:</strong> Personal injury law firm wanted to sound approachable and trustworthy without typical lawyer stereotypes.</p>
+                        <div class="category">Thought Leadership Blog Post</div>
+                        <h3>Digital Marketing Agency: "Your Website Analytics are Lying"</h3>
+                        <p><strong>Challenge:</strong> A digital marketing agency needed to produce blog content that would establish its founder as a thought leader in the industry. The goal was to attract business owners who were skeptical about marketing data, using an engaging, accessible tone to demonstrate the agency’s unique and trustworthy approach.</p>
                         
                         <div class="sample-text">
-                            "When life takes an unexpected turn, you need someone who listens first and fights second. We know you didn't plan to be here, reading about personal injury lawyers on a Tuesday afternoon. But here you are, and we're here to help. No legal jargon, no pressure tactics—just straight talk about your options and what comes next."
-                        </div>
-                        
-                        <p><strong>Result:</strong> Empathetic, human-centered copy that acknowledges the emotional context while building trust and authority.</p>
-                    </div>
-
-                    <div class="portfolio-item">
-                        <div class="category">Blog Content</div>
-                        <h3>Marketing Agency Thought Leadership</h3>
-                        <p><strong>Challenge:</strong> Digital marketing agency needed blog content that demonstrated expertise while being accessible to business owners.</p>
-                        
-                        <div class="sample-text">
-                            "Your website analytics are lying to you. Well, not exactly lying—but they're definitely not telling you the whole truth. That spike in traffic last month? Great! But if those visitors bounced faster than a rubber ball, you've got a content problem, not a traffic celebration."
-                        </div>
-                        
-                        <p><strong>Result:</strong> Engaging, conversational tone that hooks readers while delivering valuable insights. Positions the agency as knowledgeable but approachable.</p>
-                    </div>
-
-                    <div class="portfolio-item">
-                        <div class="category">Email Marketing</div>
-                        <h3>Fitness Studio Welcome Series</h3>
-                        <p><strong>Challenge:</strong> Boutique fitness studio needed welcome emails that built community feeling and encouraged class bookings.</p>
-                        
-                        <div class="sample-text">
-                            <strong>Subject: "You're in (and we're excited)"</strong><br><br>
-                            "Welcome to the Studio! We know starting something new can feel intimidating—even something as simple as a fitness class. Here's the thing: we've all been the person who showed up not knowing what to expect. That's exactly why we built this place to feel like the opposite of intimidating."
-                        </div>
-                        
-                        <p><strong>Result:</strong> Warm, inclusive tone that addresses common concerns while encouraging action. Builds personal connection from the first touchpoint.</p>
-                    </div>
-
-                    <div class="portfolio-item">
-                        <div class="category">About Page</div>
-                        <h3>Consulting Firm Founder</h3>
-                        <p><strong>Challenge:</strong> Solo consultant needed an About page that built authority while staying relatable and avoiding corporate speak.</p>
-                        
-                        <div class="sample-text">
-                            "I spent fifteen years in corporate strategy watching smart people make decisions based on gut feelings and outdated spreadsheets. Now I help businesses make decisions based on actual data and clear thinking. It's not about having all the answers—it's about asking better questions and knowing where to look for what you need."
-                        </div>
-                        
-                        <p><strong>Result:</strong> Personal but professional tone that establishes credibility through experience while positioning the consultant as a practical problem-solver.</p>
-                    </div>
-                </div>
-            </div>
-
-            <div id="contact" class="section">
-                <h2>Let's Work Together</h2>
-                <div class="contact-section">
-                    <div class="contact-content">
-                        <h3>Ready to Transform Your Message?</h3>
-                        <p style="font-size: 1.3rem; margin: 2rem 0; line-height: 1.6;">I help businesses turn browsers into buyers with copy that's sharp, strategic, and tailored to your unique brand voice. Let's create content that actually works.</p>
-                        
-                        <div class="contact-details">
-                            <div class="contact-item">
-                                <strong>Rate</strong><br>$30/hour
-                            </div>
-                            <div class="contact-item">
-                                <strong>Availability</strong><br>30+ hours/week
-                            </div>
-                            <div class="contact-item">
-                                <strong>Education</strong><br>Business Degree (Magna Cum Laude)
-                            </div>
-                            <div class="contact-item">
-                                <strong>Experience</strong><br>5+ Years Copywriting
-                            </div>
-                        </div>
-                        
-                        <a href="#" class="cta-button">Hire Me on Upwork</a>
-                        
-                        <p style="margin-top: 2rem; font-size: 1.1rem; opacity: 0.9;">I'm deadline-driven, detail-oriented, and easy to collaborate with. Let's chat if you're looking for smart, engaging copy that actually works.</p>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </div>
-
-    <script>
-        function showSection(sectionId) {
-            // Hide all sections
-            const sections = document.querySelectorAll('.section');
-            sections.forEach(section => {
-                section.classList.remove('active');
-            });
-            
-            // Show selected section
-            document.getElementById(sectionId).classList.add('active');
-            
-            // Update nav styling
-            const navLinks = document.querySelectorAll('.nav a');
-            navLinks.forEach(link => {
-                link.classList.remove('active');
-                link.style.background = 'transparent';
-                link.style.color = '#3498db';
-            });
-            
-            event.target.classList.add('active');
-        }
-
-        // Photo will load from uploaded file
-        document.addEventListener('DOMContentLoaded', function() {
-            // Photo loads automatically from professional-photo-placeholder.jpg
-        });
-    </script>
-</body>
-</html>
+                            "Your website analytics are lying to you. Well, not exactly lying, but they're definitely not telling you the whole truth. That massive spike in traffic last month? Wonderful! But if those new visitors bounced faster than a rubber ball, you don't have a traffic celebration, you have a serious content problem. You're bringing people to a party they don't want to attend. We help you fix that."
+                   
