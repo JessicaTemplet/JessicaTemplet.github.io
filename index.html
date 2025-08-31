@@ -1,4 +1,5 @@
-<!DOCTYPE html><!DOCTYPE html>
+<!DOCTYPE html><
+<!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
@@ -23,182 +24,101 @@
         }
 
         .container {
-            max-width: 1200px;
+            max-width: 900px;
             margin: 0 auto;
             padding: 0 20px;
         }
 
-        .hero {
-            padding: 6rem 0;
+        .header {
             text-align: center;
-            display: flex;
-            flex-direction: column;
-            align-items: center;
-            justify-content: center;
-            gap: 2rem;
-        }
-
-        .profile-photo {
-            width: 300px;
-            height: 300px;
-            border-radius: 10px;
-            object-fit: cover;
-            border: 6px solid #f0f0f0;
-            box-shadow: 0 20px 40px rgba(0, 0, 0, 0.05);
-            transition: transform 0.3s ease;
-        }
-
-        .profile-photo:hover {
-            transform: scale(1.02);
-        }
-
-        .hero-text h1 {
-            font-size: 3.5rem;
-            color: #2c3e50;
-            margin-bottom: 0.5rem;
-            font-weight: 300;
-        }
-
-        .tagline {
-            font-size: 1.4rem;
-            color: #7f8c8d;
-            font-style: italic;
+            padding: 2rem 0;
+            border-bottom: 1px solid #e0e0e0;
             margin-bottom: 2rem;
-            font-weight: 300;
         }
 
-        .nav {
-            display: flex;
-            justify-content: center;
-            gap: 1.5rem;
-            margin-top: 2rem;
-        }
-
-        .nav a {
+        .header-nav a {
             color: #556080;
             text-decoration: none;
             font-weight: 500;
-            padding: 0.8rem 1.8rem;
-            border-radius: 8px;
-            transition: all 0.3s ease;
-            border: 2px solid #556080;
+            padding: 0 1rem;
+            font-size: 1.1rem;
         }
 
-        .nav a:hover, .nav a.active {
-            background: #556080;
-            color: white;
-            transform: translateY(-2px);
-            box-shadow: 0 5px 15px rgba(85, 96, 128, 0.2);
+        .hero {
+            text-align: center;
+            padding: 4rem 0;
         }
 
-        .content {
-            margin: 2rem auto;
-            padding: 3rem;
+        .profile-photo {
+            width: 250px;
+            height: 250px;
+            border-radius: 50%;
+            object-fit: cover;
+            border: 4px solid #fff;
+            box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
+            margin-bottom: 1.5rem;
         }
 
+        .hero h1 {
+            font-size: 3rem;
+            color: #2c3e50;
+            font-weight: 300;
+            margin-bottom: 0.5rem;
+        }
+
+        .hero-bio {
+            font-size: 1.2rem;
+            color: #7f8c8d;
+            max-width: 600px;
+            margin: 0 auto;
+        }
+        
         .section {
-            display: none;
-            animation: fadeIn 0.5s ease-in;
-        }
-
-        .section.active {
-            display: block;
-        }
-
-        @keyframes fadeIn {
-            from { opacity: 0; transform: translateY(20px); }
-            to { opacity: 1; transform: translateY(0); }
+            padding: 3rem 0;
+            border-top: 1px solid #e0e0e0;
+            margin-bottom: 2rem;
         }
 
         .section h2 {
+            font-size: 2.2rem;
             color: #2c3e50;
-            font-size: 2.5rem;
-            margin-bottom: 2rem;
-            text-align: center;
             font-weight: 300;
-        }
-
-        .about-content {
-            font-size: 1.15rem;
-            line-height: 1.8;
-            margin-bottom: 3rem;
             text-align: center;
-            max-width: 800px;
-            margin-left: auto;
-            margin-right: auto;
-        }
-
-        .stats-grid {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
-            gap: 2rem;
-            margin: 3rem 0;
-            text-align: center;
-        }
-
-        .stat-card {
-            background-color: #f0f4f8;
-            color: #556080;
-            padding: 2rem;
-            border-radius: 15px;
-            transition: all 0.3s ease;
-        }
-
-        .stat-card:hover {
-            transform: translateY(-5px);
-            box-shadow: 0 10px 20px rgba(0, 0, 0, 0.05);
-        }
-
-        .stat-number {
-            font-size: 2.5rem;
-            font-weight: 700;
-            display: block;
-        }
-
-        .stat-label {
-            font-size: 1rem;
-            opacity: 0.9;
-            margin-top: 0.5rem;
+            margin-bottom: 2.5rem;
         }
 
         .portfolio-grid {
             display: grid;
             grid-template-columns: repeat(auto-fit, minmax(400px, 1fr));
             gap: 2.5rem;
-            margin-top: 3rem;
         }
 
         .portfolio-item {
             background-color: #f8f9fa;
             padding: 2.5rem;
-            border-radius: 15px;
-            box-shadow: 0 15px 35px rgba(0, 0, 0, 0.05);
-            transition: all 0.3s ease;
-            border: 1px solid #e0e0e0;
+            border-radius: 10px;
+            box-shadow: 0 10px 25px rgba(0, 0, 0, 0.05);
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
         }
 
         .portfolio-item:hover {
             transform: translateY(-8px);
-            box-shadow: 0 25px 50px rgba(0, 0, 0, 0.1);
+            box-shadow: 0 15px 30px rgba(0, 0, 0, 0.1);
         }
 
         .portfolio-item h3 {
             color: #2c3e50;
             font-size: 1.5rem;
-            margin-bottom: 1rem;
+            margin-bottom: 0.5rem;
         }
 
         .portfolio-item .category {
             font-size: 0.9rem;
             color: #7f8c8d;
-            padding: 0.3rem 1rem;
-            border: 1px solid #e0e0e0;
-            border-radius: 20px;
-            display: inline-block;
-            margin-bottom: 1rem;
-            font-weight: 500;
             text-transform: uppercase;
             letter-spacing: 1px;
+            margin-bottom: 1rem;
+            display: block;
         }
 
         .sample-text {
@@ -212,78 +132,44 @@
         }
 
         .contact-section {
+            text-align: center;
+            padding: 4rem 0;
+            border-top: 1px solid #e0e0e0;
+        }
+
+        .contact-section h2 {
+            margin-bottom: 1rem;
+        }
+
+        .contact-section p {
+            font-size: 1.2rem;
+            max-width: 600px;
+            margin: 0 auto 2rem;
+        }
+
+        .contact-section a {
+            display: inline-block;
             background-color: #556080;
             color: white;
-            padding: 4rem 2rem;
-            border-radius: 20px;
-            text-align: center;
-            margin-top: 3rem;
-        }
-
-        .contact-section h3 {
-            font-size: 2.2rem;
-            margin-bottom: 1rem;
-            font-weight: 300;
-        }
-
-        .cta-button {
-            display: inline-block;
-            background: white;
-            color: #556080;
-            padding: 1.2rem 2.5rem;
-            border-radius: 8px;
+            padding: 1rem 2.5rem;
+            border-radius: 5px;
             text-decoration: none;
             font-weight: 600;
-            margin-top: 2rem;
-            transition: all 0.3s ease;
-            font-size: 1.1rem;
-        }
-
-        .cta-button:hover {
-            transform: scale(1.05);
-            box-shadow: 0 15px 30px rgba(0, 0, 0, 0.2);
+            transition: background-color 0.3s ease;
         }
         
+        .contact-section a:hover {
+            background-color: #455068;
+        }
+
         @media (max-width: 768px) {
             .hero-content {
-                grid-template-columns: 1fr;
-                text-align: center;
-                gap: 2rem;
+                flex-direction: column;
             }
-
-            .profile-photo {
-                width: 200px;
-                height: 200px;
-                margin: 0 auto;
-            }
-
-            .hero-text h1 {
+            .hero h1 {
                 font-size: 2.5rem;
             }
-
-            .tagline {
-                font-size: 1.2rem;
-            }
-
-            .nav {
-                flex-direction: column;
-                gap: 1rem;
-            }
-
             .portfolio-grid {
-                grid-template-columns: 1fr;
-            }
-
-            .stats-grid {
-                grid-template-columns: repeat(2, 1fr);
-            }
-
-            .content {
-                padding: 2rem;
-                margin: 1rem auto;
-            }
-
-            .contact-details {
                 grid-template-columns: 1fr;
             }
         }
@@ -291,53 +177,72 @@
 </head>
 <body>
     <div class="container">
-        <div class="hero">
-            <div class="hero-content">
+        <header class="header">
+            <nav class="header-nav">
+                <a href="#portfolio">Portfolio</a>
+                <a href="#contact">Contact</a>
+            </nav>
+        </header>
+
+        <main>
+            <section class="hero">
                 <img src="professional-photo-placeholder.jpg" alt="Jessica T. - Professional Copywriter" class="profile-photo">
-                <div class="hero-text">
-                    <h1>Jessica T.</h1>
-                    <p class="tagline">Strategic Copywriter. Helping Businesses Say What They Mean.</p>
-                    <nav class="nav">
-                        <a href="#" onclick="showSection('about')" class="active">About</a>
-                        <a href="#" onclick="showSection('portfolio')">Portfolio</a>
-                        <a href="#" onclick="showSection('contact')">Let's Talk</a>
-                    </nav>
+                <h1>Jessica T.</h1>
+                <p class="hero-bio">I'm a freelance copywriter who helps businesses say what they mean, clearly and confidently. I specialize in writing website content that's sharp, strategic, and tailored to your brand's unique voice.</p>
+            </section>
+
+            <section id="portfolio" class="section">
+                <h2>Portfolio</h2>
+                <div class="portfolio-grid">
+                    <div class="portfolio-item">
+                        <h3>SaaS Homepage: A Better Way to Collaborate</h3>
+                        <span class="category">Brand Messaging & Homepage</span>
+                        <p><strong>Challenge:</strong> A new project management software called "ShiftFlow" needed to differentiate itself from competitors. The goal was to attract creative teams who felt bogged down by overly complex, corporate-style tools.</p>
+                        <div class="sample-text">
+                            "Finally, project management that works the way you do. No more drowning in notifications or hunting through endless folders. ShiftFlow organizes your team, not just your tasks, with intuitive automation that actually learns how your team works. It's the right information, delivered to the right person, at exactly the right time. So you can get back to creating."
+                        </div>
+                    </div>
+                    
+                    <div class="portfolio-item">
+                        <h3>Artisan Coffee Brand: Single-Origin Peruvian Beans</h3>
+                        <span class="category">E-commerce Product Descriptions</span>
+                        <p><strong>Challenge:</strong> A premium, small-batch coffee roaster wanted to justify a higher price point for its "Cusco Valley" beans. The product description needed to appeal to coffee connoisseurs and new home brewers by telling a sensory story.</p>
+                        <div class="sample-text">
+                            "Escape to the Andes with every sip. Our Cusco Valley beans are hand-selected from small, family-run farms high in the Peruvian mountains. Grown in rich volcanic soil, they develop a complex profile of nutty sweetness with hints of dark chocolate and bright citrus. This isn't just coffee, it's a moment of mindful escape, a rich and aromatic ritual that makes your kitchen smell like the world's best café."
+                        </div>
+                    </div>
+
+                    <div class="portfolio-item">
+                        <h3>Digital Marketing Agency: "Your Website Analytics are Lying"</h3>
+                        <span class="category">Thought Leadership Blog Post</span>
+                        <p><strong>Challenge:</strong> A digital marketing agency needed to produce blog content that would establish its founder as a thought leader. The goal was to attract business owners who were skeptical about marketing data, using an engaging, accessible tone.</p>
+                        <div class="sample-text">
+                            "Your website analytics are lying to you. Well, not exactly lying, but they're definitely not telling you the whole truth. That massive spike in traffic last month? Wonderful! But if those new visitors bounced faster than a rubber ball, you don't have a traffic celebration, you have a serious content problem. You're bringing people to a party they don't want to attend. We help you fix that."
+                        </div>
+                    </div>
+
+                    <div class="portfolio-item">
+                        <h3>Local Law Firm: Personal Injury</h3>
+                        <span class="category">Service Page: Legal Services</span>
+                        <p><strong>Challenge:</strong> A personal injury law firm in a small community needed a service page that felt approachable and trustworthy. The goal was to build confidence with clients who might be intimidated by the legal process, avoiding overly formal language.</p>
+                        <div class="sample-text">
+                            "When life takes an unexpected turn, you need someone who listens first and fights second. We know you didn't plan to be here, reading about personal injury on a Tuesday afternoon. But here you are, and we're here to help. No legal jargon, no pressure tactics, just straight talk about your options and what comes next. We're your neighbors, and we're ready to stand by your side."
+                        </div>
+                    </div>
                 </div>
-            </div>
-        </div>
+            </section>
+
+            <section id="contact" class="contact-section">
+                <h2>Let's Work Together</h2>
+                <p>I help businesses turn browsers into buyers with copy that's sharp, strategic, and tailored to your unique brand voice. Let's create content that actually works.</p>
+                <a href="#">Hire Me on Upwork</a>
+            </section>
+        </main>
     </div>
+</body>
+</html>
 
-    <div class="container">
-        <div class="content">
-            <div id="about" class="section active">
-                <h2>About Jessica</h2>
-                <div class="about-content">
-                    <p>I am a freelance copywriter who helps businesses say what they mean, clearly, confidently, and in a voice that fits their brand. I specialize in writing website content that's sharp, strategic, and tailored to your brand's unique voice.</p>
-                    
-                    <p>With a Bachelor's in Business (Magna Cum Laude) from Louisiana State University, I understand the strategic side of content. My goal is always to make sure your message connects with your audience and supports your bottom line.</p>
-                    
-                    <p>I am deadline-driven, detail-oriented, and easy to collaborate with. From product pages to blog posts, I help businesses create content that actually converts.</p>
-                </div>
-
-                <div class="stats-grid">
-                    <div class="stat-card">
-                        <span class="stat-number">5+</span>
-                        <div class="stat-label">Years Experience</div>
-                    </div>
-                    <div class="stat-card">
-                        <span class="stat-number">$30</span>
-                        <div class="stat-label">Per Hour</div>
-                    </div>
-                    <div class="stat-card">
-                        <span class="stat-number">30+</span>
-                        <div class="stat-label">Hours/Week Available</div>
-                    </div>
-                    <div class="stat-card">
-                        <span class="stat-number">100%</span>
-                        <div class="stat-label">Client Satisfaction</div>
-                    </div>
-                </div>
-            </div>
+div>
 
             <div id="portfolio" class="section">
                 <h2>Portfolio Samples</h2>
