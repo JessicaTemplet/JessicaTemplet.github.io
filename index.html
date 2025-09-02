@@ -3,8 +3,8 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Jessica Tèmplét | Strategic Content That Converts</title>
-    <meta name="description" content="Jessica Tèmplét - Freelance copywriter specializing in strategic business content. 15+ years legal experience. Clear, confident copy that converts.">
+    <title>Jessica Templet | Strategic Content That Converts</title>
+    <meta name="description" content="Jessica Templet - Freelance copywriter specializing in strategic business content. 15+ years legal experience. Clear, confident copy that converts.">
     <style>
         * {
             margin: 0;
@@ -46,6 +46,17 @@
             font-weight: 300;
             max-width: 600px;
             margin: 0 auto;
+        }
+
+        .profile-photo {
+            width: 300px;
+            height: 300px;
+            border-radius: 50%;
+            margin: 0 auto 40px auto;
+            display: block;
+            object-fit: cover;
+            border: 4px solid #fff;
+            box-shadow: 0 4px 20px rgba(0,0,0,0.1);
         }
 
         nav {
@@ -98,6 +109,10 @@
             text-align: center;
         }
 
+        .about-content p {
+            margin-bottom: 30px;
+        }
+
         .portfolio-grid {
             display: grid;
             gap: 60px;
@@ -116,33 +131,102 @@
             box-shadow: 0 8px 30px rgba(0,0,0,0.12);
         }
 
-        .portfolio-item h3 {
-            font-size: 1.8rem;
-            font-weight: 400;
+        .portfolio-title {
+            font-size: 1.5rem;
+            font-weight: 600;
+            margin-bottom: 15px;
+            color: #1a1a1a;
+        }
+
+        .portfolio-description {
+            font-size: 1rem;
+            line-height: 1.6;
+            color: #555;
+            margin-bottom: 20px;
+        }
+
+        .portfolio-tags {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 10px;
+        }
+
+        .tag {
+            background: #f0f0f0;
+            padding: 5px 12px;
+            border-radius: 15px;
+            font-size: 0.8rem;
+            color: #666;
+        }
+
+        .skills-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 40px;
+            margin-top: 40px;
+        }
+
+        .skill-category {
+            text-align: center;
+        }
+
+        .skill-category h3 {
+            font-size: 1.3rem;
             margin-bottom: 20px;
             color: #1a1a1a;
-            line-height: 1.3;
         }
 
-        .portfolio-item h4 {
-            font-size: 1.2rem;
+        .skill-list {
+            font-size: 1rem;
+            color: #666;
+        }
+
+        .writing-samples {
+            display: grid;
+            gap: 40px;
+        }
+
+        .sample-item {
+            background: #fff;
+            padding: 30px;
+            border-radius: 8px;
+            box-shadow: 0 2px 15px rgba(0,0,0,0.06);
+            border-left: 4px solid #1a365d;
+        }
+
+        .sample-title {
+            font-size: 1.3rem;
             font-weight: 600;
-            margin: 30px 0 15px 0;
-            color: #2d3748;
+            margin-bottom: 10px;
+            color: #1a1a1a;
         }
 
-        .portfolio-item p, .portfolio-item li {
+        .sample-type {
+            font-size: 0.9rem;
+            color: #666;
+            text-transform: uppercase;
+            letter-spacing: 1px;
             margin-bottom: 15px;
-            line-height: 1.7;
         }
 
-        .portfolio-item ul {
-            margin: 15px 0 15px 20px;
+        .sample-excerpt {
+            font-style: italic;
+            color: #555;
+            margin-bottom: 15px;
+            padding: 20px;
+            background: #f8f9fa;
+            border-radius: 5px;
+            border-left: 3px solid #1a365d;
+        }
+
+        .sample-description {
+            font-size: 0.95rem;
+            color: #666;
         }
 
         .cta-section {
-            background: #1a365d;
-            color: white;
+            background: linear-gradient(135deg, #1a365d 0%, #2d5a87 100%);
+            color: #fff;
             text-align: center;
             padding: 80px 0;
         }
@@ -167,61 +251,27 @@
             text-decoration: none;
             border-radius: 5px;
             font-weight: 600;
-            transition: transform 0.3s ease;
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
         }
 
         .cta-button:hover {
             transform: translateY(-2px);
-        }
-
-        .stats {
-            display: flex;
-            justify-content: center;
-            gap: 60px;
-            margin: 40px 0;
-            flex-wrap: wrap;
-        }
-
-        .stat {
-            text-align: center;
-        }
-
-        .stat-number {
-            font-size: 2.5rem;
-            font-weight: 300;
-            color: #2d3748;
-            display: block;
-        }
-
-        .stat-label {
-            font-size: 0.9rem;
-            text-transform: uppercase;
-            letter-spacing: 1px;
-            color: #718096;
-        }
-
-        .author-photo {
-            width: 300px;
-            height: 300px;
-            border-radius: 15px;
-            margin: 0 auto 40px auto;
-            display: block;
-            object-fit: cover;
-            border: 4px solid #e2e8f0;
+            box-shadow: 0 8px 25px rgba(0,0,0,0.2);
         }
 
         footer {
-            background: #1a1a1a;
-            color: #ccc;
+            background: #2c2c2c;
+            color: #fff;
             text-align: center;
             padding: 40px 0;
         }
 
         .highlight {
-            background: linear-gradient(120deg, #ffd70026 0%, #ffd70026 100%);
-            background-repeat: no-repeat;
-            background-size: 100% 40%;
-            background-position: 0 80%;
+            background: linear-gradient(120deg, #f8f9fa 0%, #e9ecef 100%);
+            padding: 30px;
+            border-radius: 8px;
+            margin: 30px 0;
+            border-left: 4px solid #1a365d;
         }
 
         @media (max-width: 768px) {
@@ -234,60 +284,75 @@
                 gap: 20px;
             }
             
-            .stats {
-                flex-direction: column;
-                gap: 30px;
-            }
-            
             .section {
                 padding: 60px 0;
+            }
+            
+            .skills-grid {
+                grid-template-columns: 1fr;
             }
         }
     </style>
 </head>
+
 <body>
     <header>
         <div class="container">
             <h1 class="hero-title">Jessica Templet</h1>
-            <p class="hero-subtitle">Strategic copywriter creating clear, confident content that connects with your audience and supports your bottom line</p>
+            <p class="hero-subtitle">Strategic Content That Converts</p>
         </div>
     </header>
 
     <nav>
         <div class="container">
             <ul class="nav-links">
-                <li><a href="#about">Meet the Author</a></li>
+                <li><a href="#about">About</a></li>
                 <li><a href="#portfolio">Portfolio</a></li>
-                <li><a href="#contact">Work Together</a></li>
+                <li><a href="#contact">Contact</a></li>
             </ul>
         </div>
     </nav>
 
     <section id="about" class="section">
         <div class="container">
-            <h2 class="section-title">Meet the Author</h2>
-            <img src="photo-placeholder.jpg" alt="Jessica Templet" class="author-photo">
+            <img src="photo-placeholder.jpg" alt="Jessica Templet" class="profile-photo">
+            <h2 class="section-title">About</h2>
             <div class="about-content">
-                <p>I'm a freelance copywriter who helps businesses say what they mean, clearly, confidently, and in a voice that fits their brand. I specialize in writing website content that's sharp, strategic, and tailored to your brand's unique voice. I pay special attention to <span class="highlight">SEO, AISO, and AISerp best practices</span> to ensure your message reaches your audience.</p>
+                <p>I'm a freelance copywriter who helps businesses say what they mean, clearly, confidently, and in a voice that fits their brand. I specialize in writing website content that's sharp, strategic, and tailored to your brand's unique voice. I pay special attention to SEO, AISO, and AISerp best practices to ensure your message reaches your audience.</p>
                 
-                <div class="stats">
-                    <div class="stat">
-                        <span class="stat-number">15+</span>
-                        <span class="stat-label">Years Legal Experience</span>
+                <div class="highlight" style="display: grid; grid-template-columns: repeat(3, 1fr); gap: 30px; text-align: center; padding: 40px 30px; margin: 50px 0;">
+                    <div>
+                        <div style="font-size: 2.5rem; font-weight: bold; color: #1a365d; margin-bottom: 10px;">15+</div>
+                        <div style="font-size: 1rem; color: #666;">Years Legal Experience</div>
                     </div>
-                    <div class="stat">
-                        <span class="stat-number">ASU</span>
-                        <span class="stat-label">Business Degree</span>
+                    <div>
+                        <div style="font-size: 2.5rem; font-weight: bold; color: #1a365d; margin-bottom: 10px;">ASU</div>
+                        <div style="font-size: 1rem; color: #666;">Business Degree</div>
                     </div>
-                    <div class="stat">
-                        <span class="stat-number">100%</span>
-                        <span class="stat-label">Ethics-First Approach</span>
+                    <div>
+                        <div style="font-size: 2.5rem; font-weight: bold; color: #1a365d; margin-bottom: 10px;">100%</div>
+                        <div style="font-size: 1rem; color: #666;">Ethics-First Approach</div>
                     </div>
                 </div>
-
-                <p>With a Bachelor's in Business from Arkansas State University, I understand the strategic side of content. My goal is always to make sure your message connects with your audience and supports your bottom line. My 15+ years in the legal field has given me the skills necessary for <span class="highlight">persuasive writing without the manipulation</span> you see all too often in copywriting.</p>
-
+                
+                <p>With a Bachelor's in Business from Arkansas State University, I understand the strategic side of content. My goal is always to make sure your message connects with your audience and supports your bottom line. My 15+ years in the legal field has given me the skills necessary for persuasive writing without the manipulation you see all too often in copywriting.</p>
+                
                 <p>I'm deadline-driven, detail-oriented, and easy to collaborate with. From product pages to blog posts, I help businesses create content that actually converts.</p>
+            </div>
+            
+            <div class="skills-grid">
+                <div class="skill-category">
+                    <h3>Content Strategy</h3>
+                    <p class="skill-list">Brand Voice Development<br>Content Planning<br>Conversion Optimization<br>Audience Research</p>
+                </div>
+                <div class="skill-category">
+                    <h3>Copywriting</h3>
+                    <p class="skill-list">Website Copy<br>Sales Pages<br>Email Campaigns<br>Product Descriptions</p>
+                </div>
+                <div class="skill-category">
+                    <h3>Content Creation</h3>
+                    <p class="skill-list">Blog Posts<br>Case Studies<br>White Papers<br>Social Media Content</p>
+                </div>
             </div>
         </div>
     </section>
@@ -296,150 +361,106 @@
         <div class="container">
             <h2 class="section-title">Portfolio</h2>
             <div class="portfolio-grid">
+                <div class="portfolio-item">
+                    <h3 class="portfolio-title">SaaS Product Launch</h3>
+                    <p class="portfolio-description">Complete website copy and email sequence for a B2B software launch. Focused on clear value propositions and addressing specific pain points for busy executives.</p>
+                    <div class="portfolio-tags">
+                        <span class="tag">Website Copy</span>
+                        <span class="tag">Email Campaign</span>
+                        <span class="tag">B2B</span>
+                    </div>
+                </div>
                 
-                <article class="portfolio-item">
-                    <h3>SERP Domination: How to Leverage Google to Own Your Niche</h3>
-                    <p>Ranking on page one is good. Owning the SERP is better. When your brand shows up in featured snippets, People Also Ask boxes, local packs, and organic listings, you do more than get clicks. You build authority.</p>
-                    
-                    <h4>Why SERPs Matter More Than Rankings</h4>
-                    <ul>
-                        <li>75% of users never scroll past the first page</li>
-                        <li>Featured snippets get 8% more clicks than the top organic result</li>
-                        <li>Authority content signals expertise and builds trust</li>
-                    </ul>
-                    
-                    <h4>3 Steps to SERP Domination</h4>
-                    <p><strong>1. Content Hubs, Not Blog Islands.</strong> Create pillar pages with internal linking clusters. Google recognizes them as authoritative resources.</p>
-                    <p><strong>2. Answer Questions Directly.</strong> Format answers in 40 to 60 word blocks to target featured snippets.</p>
-                    <p><strong>3. Diversify Formats.</strong> Videos, infographics, and comparison charts often appear in SERP features where plain text cannot.</p>
-                    
-                    <p style="margin-top: 30px; font-weight: 600;">SEO is no longer just about ranking for keywords. It is about positioning your brand as the most visible answer to your audience's most important questions.</p>
-                </article>
+                <div class="portfolio-item">
+                    <h3 class="portfolio-title">E-commerce Brand Refresh</h3>
+                    <p class="portfolio-description">Rewrote product pages and category descriptions for a sustainable fashion brand. Emphasized brand values while maintaining SEO performance and improving conversion rates.</p>
+                    <div class="portfolio-tags">
+                        <span class="tag">Product Pages</span>
+                        <span class="tag">Brand Voice</span>
+                        <span class="tag">E-commerce</span>
+                    </div>
+                </div>
+                
+                <div class="portfolio-item">
+                    <h3 class="portfolio-title">Financial Services Content</h3>
+                    <p class="portfolio-description">Blog series and educational content for a fintech startup. Translated complex financial concepts into accessible, engaging content for small business owners.</p>
+                    <div class="portfolio-tags">
+                        <span class="tag">Blog Content</span>
+                        <span class="tag">Educational</span>
+                        <span class="tag">Fintech</span>
+                    </div>
+                </div>
+                
+                <div class="portfolio-item">
+                    <h3 class="portfolio-title">Legal Tech Case Study</h3>
+                    <p class="portfolio-description">Long-form case study highlighting ROI and client success for a legal software platform. Combined my legal background with compelling storytelling.</p>
+                    <div class="portfolio-tags">
+                        <span class="tag">Case Study</span>
+                        <span class="tag">Legal Tech</span>
+                        <span class="tag">ROI Focus</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
 
-                <article class="portfolio-item">
-                    <h3>Why the First 90 Days Decide Your SaaS Customer's Lifetime Value</h3>
-                    <p>In SaaS, acquisition is expensive. Churn is deadly. Studies show most cancellations happen within the first 90 days. The real growth driver isn't acquisition. It is retention.</p>
-                    
-                    <h4>Why Customers Leave</h4>
-                    <ul>
-                        <li>Onboarding is confusing or overwhelming</li>
-                        <li>Product value isn't communicated early</li>
-                        <li>Support feels reactive instead of proactive</li>
-                    </ul>
-                    
-                    <h4>3 Ways to Keep Customers Beyond the Trial Period</h4>
-                    <p><strong>1. Personalized Onboarding Journeys.</strong> Tailor tutorials and tooltips to user roles instead of sending every customer the same checklist.</p>
-                    <p><strong>2. Health Scores That Trigger Action.</strong> Track logins, feature usage, and support tickets. Proactively reach out before a customer goes dark.</p>
-                    <p><strong>3. Customer Success as a Growth Driver.</strong> Do more than solve problems. Help customers achieve ROI milestones within their first 30 days.</p>
-                    
-                    <p style="margin-top: 30px; font-weight: 600;">A 5% increase in retention can lift profits by 25 to 95 percent. For SaaS, the first 90 days are not a "trial." They are the make-or-break window for your entire business model.</p>
-                </article>
+    <section id="writing" class="section">
+        <div class="container">
+            <h2 class="section-title">Writing Samples</h2>
+            <div class="writing-samples">
+                <div class="sample-item">
+                    <h3 class="sample-title">SERP Domination: How to Leverage Google to Own Your Niche</h3>
+                    <p class="sample-type">SEO Strategy Blog Post</p>
+                    <div class="sample-excerpt">
+                        "Ranking on page one is good. Owning the SERP is better. When your brand shows up in featured snippets, People Also Ask boxes, local packs, and organic listings, you do more than get clicks. You build authority."
+                    </div>
+                    <p class="sample-description">Strategic SEO content that positions expertise while providing actionable tactics. Focuses on SERP features beyond traditional rankings.</p>
+                </div>
 
-                <article class="portfolio-item">
-                    <h3>4 Proven B2B Lead Generation Strategies That Actually Convert</h3>
-                    <p>B2B marketers face a different challenge than B2C: long sales cycles, multiple decision makers, and the need for trust before purchase. Filling your funnel with qualified leads is far more valuable than filling it with any leads.</p>
-                    
-                    <h4>1. Intent-Based Content Marketing</h4>
-                    <p>Instead of chasing broad keywords, focus on "bottom-of-funnel" content like comparison guides, pricing breakdowns, or ROI calculators. These leads are closer to purchase.</p>
-                    
-                    <h4>2. Account-Based Marketing (ABM)</h4>
-                    <p>ABM aligns sales and marketing around specific target accounts. Personalized campaigns yield higher engagement and shorten sales cycles.</p>
-                    
-                    <h4>3. LinkedIn as a Demand Gen Machine</h4>
-                    <p>LinkedIn is still the number one B2B channel. Use it for thought leadership content, retargeting ads, and lead gen forms.</p>
-                    
-                    <h4>4. Data-Driven Nurturing</h4>
-                    <p>Automated workflows should deliver case studies, testimonials, and demos based on prospect behavior. A lead who downloads a whitepaper about compliance does not need the same messaging as one who watches a demo video.</p>
-                    
-                    <p style="margin-top: 30px; font-weight: 600;">B2B lead generation is not about volume. It is about relevance.</p>
-                </article>
+                <div class="sample-item">
+                    <h3 class="sample-title">Why the First 90 Days Decide Your SaaS Customer's Lifetime Value</h3>
+                    <p class="sample-type">SaaS Industry Blog</p>
+                    <div class="sample-excerpt">
+                        "In SaaS, acquisition is expensive. Churn is deadly. Studies show most cancellations happen within the first 90 days. The real growth driver isn't acquisition. It is retention."
+                    </div>
+                    <p class="sample-description">Data-driven content for SaaS companies focusing on customer retention strategies. Combines industry statistics with actionable advice.</p>
+                </div>
 
-                <article class="portfolio-item">
-                    <h3>Why 60% of Small Businesses Fail After a Cyberattack: How to Protect Yours</h3>
-                    <p>Every 39 seconds, a hacker attempts a breach. For small businesses, the cost of one successful attack averages $25,000 in direct losses. That figure doesn't even include reputational harm. Yet many small business owners still assume, "We're too small to be a target." The truth? Hackers know small businesses are the easiest targets.</p>
-                    
-                    <h4>Why Small Businesses Are Targeted</h4>
-                    <ul>
-                        <li>Fewer security layers compared to enterprises</li>
-                        <li>More likely to use outdated software</li>
-                        <li>Employees often lack cybersecurity training</li>
-                    </ul>
-                    
-                    <h4>The Real Risk: Beyond the Breach</h4>
-                    <p><strong>Downtime:</strong> A ransomware attack can freeze operations for days</p>
-                    <p><strong>Customer Trust:</strong> A leaked email list can damage reputation instantly</p>
-                    <p><strong>Legal & Compliance Costs:</strong> Noncompliance with GDPR, CCPA, or HIPAA adds fines to your losses</p>
-                    
-                    <h4>3 Affordable Ways to Strengthen Security Today</h4>
-                    <p><strong>1. Adopt MFA (Multi-Factor Authentication).</strong> Most platforms now offer this free tool, which drastically reduces breaches.</p>
-                    <p><strong>2. Train Your Employees.</strong> Phishing remains the number one entry point. Quarterly simulations cut risk by 60%.</p>
-                    <p><strong>3. Regular Backups.</strong> A secure cloud backup costs as little as $10/month and can save your entire business.</p>
-                    
-                    <p style="margin-top: 30px; font-weight: 600;">Cybersecurity is no longer optional. It is survival.</p>
-                </article>
+                <div class="sample-item">
+                    <h3 class="sample-title">4 Proven B2B Lead Generation Strategies That Actually Convert</h3>
+                    <p class="sample-type">B2B Marketing</p>
+                    <div class="sample-excerpt">
+                        "B2B marketers face a different challenge than B2C: long sales cycles, multiple decision makers, and the need for trust before purchase. Filling your funnel with qualified leads is far more valuable than filling it with any leads."
+                    </div>
+                    <p class="sample-description">Strategic marketing content that addresses B2B-specific challenges with practical, implementable solutions.</p>
+                </div>
 
-                <article class="portfolio-item">
-                    <h3>Stop "Hustling" Yourself Into Burnout: 5 Smarter Ways to Get More Done</h3>
-                    <p>Let's be real. Nobody brags about working 80-hour weeks anymore. Hustle culture is out, and sustainable productivity is in. The truth? Working more hours doesn't mean you're getting more done. It probably just means you're tired, distracted, and running on caffeine fumes.</p>
-                    
-                    <p>Here's how to flip the script and actually get ahead without burning out.</p>
-                    
-                    <h4>1. Ditch the To-Do List, Use a "Done List"</h4>
-                    <p>Logging tasks you finish builds momentum and motivation.</p>
-                    
-                    <h4>2. Time-Box Your Day</h4>
-                    <p>Work in 90-minute sprints, then take a 20-minute break. That's how your brain performs best.</p>
-                    
-                    <h4>3. Set Hard Stop Times</h4>
-                    <p>You'd be amazed what you can do when you have to shut down at 6pm. Boundaries create efficiency.</p>
-                    
-                    <h4>4. Automate the Boring Stuff</h4>
-                    <p>Calendars, reminders, even emails can be outsourced to free tools.</p>
-                    
-                    <h4>5. Rest Like It's a Meeting</h4>
-                    <p>Put it on your calendar. No excuses. Rest is fuel, not the opposite of work.</p>
-                    
-                    <p style="margin-top: 30px; font-style: italic;">If you're tired of "working harder" and ready to work smarter, it's time for a change.</p>
-                </article>
+                <div class="sample-item">
+                    <h3 class="sample-title">AI Won't Take Your Job: But Someone Who Knows How to Use It Will</h3>
+                    <p class="sample-type">Thought Leadership</p>
+                    <div class="sample-excerpt">
+                        "The conversation around AI often swings between two extremes. Some say 'Robots are coming for us all.' Others dismiss AI as a fad. The truth sits in between. AI won't eliminate jobs across the board, but it will fundamentally change how we work."
+                    </div>
+                    <p class="sample-description">Balanced perspective on AI and future of work. Addresses common fears while providing practical career advice.</p>
+                </div>
 
-                <article class="portfolio-item">
-                    <h3>AI Won't Take Your Job: But Someone Who Knows How to Use It Will</h3>
-                    <p>The conversation around AI often swings between two extremes. Some say "Robots are coming for us all." Others dismiss AI as a fad. The truth sits in between. AI won't eliminate jobs across the board, but it will fundamentally change how we work. The people who adapt first are the ones who win.</p>
-                    
-                    <h4>The Reality Check</h4>
-                    <ul>
-                        <li>60% of tasks in today's jobs could be at least partially automated</li>
-                        <li>85% of jobs in 2030 haven't even been invented yet</li>
-                    </ul>
-                    
-                    <h4>What That Means for You</h4>
-                    <p>Instead of fearing AI, think of it like the calculator. Accountants didn't disappear when calculators arrived; they leveled up. AI is the new baseline skill.</p>
-                    
-                    <h4>3 Ways to Future-Proof Your Career</h4>
-                    <p><strong>1. Learn AI-Adjacency.</strong> Even if you're not coding, you should know how to use tools like ChatGPT or MidJourney.</p>
-                    <p><strong>2. Double Down on Human Skills.</strong> Empathy, creativity, and leadership cannot be automated.</p>
-                    <p><strong>3. Experiment Now.</strong> The people building small AI workflows today will be tomorrow's leaders.</p>
-                </article>
+                <div class="sample-item">
+                    <h3 class="sample-title">Why 60% of Small Businesses Fail After a Cyberattack</h3>
+                    <p class="sample-type">Cybersecurity Content</p>
+                    <div class="sample-excerpt">
+                        "Every 39 seconds, a hacker attempts a breach. For small businesses, the cost of one successful attack averages $25,000 in direct losses. That figure doesn't even include reputational harm. Yet many small business owners still assume, 'We're too small to be a target.'"
+                    </div>
+                    <p class="sample-description">Educational content that uses compelling statistics to grab attention while providing practical security advice for small business owners.</p>
+                </div>
 
-                <article class="portfolio-item">
-                    <h3>SERP Domination: How to Leverage Google to Own Your Niche</h3>
-                    <p>Ranking on page one is good. Owning the SERP is better. When your brand shows up in featured snippets, People Also Ask boxes, local packs, and organic listings, you do more than get clicks. You build authority.</p>
-                    
-                    <h4>Why SERPs Matter More Than Rankings</h4>
-                    <ul>
-                        <li>75% of users never scroll past the first page</li>
-                        <li>Featured snippets get 8% more clicks than the top organic result</li>
-                        <li>Authority content signals expertise and builds trust</li>
-                    </ul>
-                    
-                    <h4>3 Steps to SERP Domination</h4>
-                    <p><strong>1. Content Hubs, Not Blog Islands.</strong> Create pillar pages with internal linking clusters. Google recognizes them as authoritative resources.</p>
-                    <p><strong>2. Answer Questions Directly.</strong> Format answers in 40 to 60 word blocks to target featured snippets.</p>
-                    <p><strong>3. Diversify Formats.</strong> Videos, infographics, and comparison charts often appear in SERP features where plain text cannot.</p>
-                    
-                    <p style="margin-top: 30px; font-weight: 600;">SEO is no longer just about ranking for keywords. It is about positioning your brand as the most visible answer to your audience's most important questions.</p>
-                </article>
-
+                <div class="sample-item">
+                    <h3 class="sample-title">Stop "Hustling" Yourself Into Burnout</h3>
+                    <p class="sample-type">Productivity & Wellness</p>
+                    <div class="sample-excerpt">
+                        "Let's be real. Nobody brags about working 80-hour weeks anymore. Hustle culture is out, and sustainable productivity is in. The truth? Working more hours doesn't mean you're getting more done."
+                    </div>
+                    <p class="sample-description">Lifestyle content that challenges popular productivity myths while offering practical alternatives. Appeals to professionals seeking work-life balance.</p>
+                </div>
             </div>
         </div>
     </section>
@@ -462,7 +483,7 @@
                 <p>Website Copy • Blog Posts • Product Pages • Email Campaigns • Sales Pages • Content Strategy</p>
                 
                 <p style="margin-top: 40px;">
-                    <strong>Contact me on Upwork</strong> or reach out directly to discuss your project.
+                    <strong>Contact me on <a href="https://www.upwork.com/freelancers/~0197a6e5ad29d8b543?mp_source=share" target="_blank" style="color: #1a365d; text-decoration: none;">Upwork</a></strong> or reach out directly to discuss your project.
                 </p>
             </div>
         </div>
@@ -470,7 +491,7 @@
 
     <footer>
         <div class="container">
-            <p>&copy; 2025 Jessica Tèmplét. Strategic content that converts.</p>
+            <p>&copy; 2025 Jessica Templet. Strategic content that converts.</p>
         </div>
     </footer>
 
