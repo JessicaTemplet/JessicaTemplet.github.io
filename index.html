@@ -209,19 +209,19 @@
             margin-bottom: 15px;
         }
 
-        .sample-excerpt {
-            font-style: italic;
-            color: #555;
-            margin-bottom: 15px;
-            padding: 20px;
+        .full-article {
+            text-align: left;
+            padding: 30px;
             background: #f8f9fa;
-            border-radius: 5px;
-            border-left: 3px solid #1a365d;
+            border-radius: 8px;
+            border-left: 4px solid #1a365d;
+            line-height: 1.7;
         }
 
-        .sample-description {
-            font-size: 0.95rem;
-            color: #666;
+        .full-article h4 {
+            color: #1a365d;
+            margin: 20px 0 10px 0;
+            font-size: 1.1rem;
         }
 
         .cta-section {
@@ -291,6 +291,11 @@
             .skills-grid {
                 grid-template-columns: 1fr;
             }
+
+            .profile-photo {
+                width: 250px;
+                height: 250px;
+            }
         }
     </style>
 </head>
@@ -306,7 +311,7 @@
     <nav>
         <div class="container">
             <ul class="nav-links">
-                <li><a href="#about">About</a></li>
+                <li><a href="#about">Meet The Author</a></li>
                 <li><a href="#portfolio">Portfolio</a></li>
                 <li><a href="#contact">Contact</a></li>
             </ul>
@@ -316,11 +321,11 @@
     <section id="about" class="section">
         <div class="container">
             <img src="photo-placeholder.jpg" alt="Jessica Templet" class="profile-photo">
-            <h2 class="section-title">About</h2>
+            <h2 class="section-title">Meet The Author</h2>
             <div class="about-content">
                 <p>I'm a freelance copywriter who helps businesses say what they mean, clearly, confidently, and in a voice that fits their brand. I specialize in writing website content that's sharp, strategic, and tailored to your brand's unique voice. I pay special attention to SEO, AISO, and AISerp best practices to ensure your message reaches your audience.</p>
                 
-                <div class="highlight" style="display: grid; grid-template-columns: repeat(3, 1fr); gap: 30px; text-align: center; padding: 40px 30px; margin: 50px 0;">
+                <div class="highlight" style="display: flex; flex-direction: column; gap: 30px; text-align: center; padding: 40px 30px; margin: 50px 0;">
                     <div>
                         <div style="font-size: 2.5rem; font-weight: bold; color: #1a365d; margin-bottom: 10px;">15+</div>
                         <div style="font-size: 1rem; color: #666;">Years Legal Experience</div>
@@ -360,106 +365,151 @@
     <section id="portfolio" class="section" style="background: #fff;">
         <div class="container">
             <h2 class="section-title">Portfolio</h2>
-            <div class="portfolio-grid">
-                <div class="portfolio-item">
-                    <h3 class="portfolio-title">SaaS Product Launch</h3>
-                    <p class="portfolio-description">Complete website copy and email sequence for a B2B software launch. Focused on clear value propositions and addressing specific pain points for busy executives.</p>
-                    <div class="portfolio-tags">
-                        <span class="tag">Website Copy</span>
-                        <span class="tag">Email Campaign</span>
-                        <span class="tag">B2B</span>
-                    </div>
-                </div>
-                
-                <div class="portfolio-item">
-                    <h3 class="portfolio-title">E-commerce Brand Refresh</h3>
-                    <p class="portfolio-description">Rewrote product pages and category descriptions for a sustainable fashion brand. Emphasized brand values while maintaining SEO performance and improving conversion rates.</p>
-                    <div class="portfolio-tags">
-                        <span class="tag">Product Pages</span>
-                        <span class="tag">Brand Voice</span>
-                        <span class="tag">E-commerce</span>
-                    </div>
-                </div>
-                
-                <div class="portfolio-item">
-                    <h3 class="portfolio-title">Financial Services Content</h3>
-                    <p class="portfolio-description">Blog series and educational content for a fintech startup. Translated complex financial concepts into accessible, engaging content for small business owners.</p>
-                    <div class="portfolio-tags">
-                        <span class="tag">Blog Content</span>
-                        <span class="tag">Educational</span>
-                        <span class="tag">Fintech</span>
-                    </div>
-                </div>
-                
-                <div class="portfolio-item">
-                    <h3 class="portfolio-title">Legal Tech Case Study</h3>
-                    <p class="portfolio-description">Long-form case study highlighting ROI and client success for a legal software platform. Combined my legal background with compelling storytelling.</p>
-                    <div class="portfolio-tags">
-                        <span class="tag">Case Study</span>
-                        <span class="tag">Legal Tech</span>
-                        <span class="tag">ROI Focus</span>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <section id="writing" class="section">
-        <div class="container">
-            <h2 class="section-title">Writing Samples</h2>
+            
+            <h3 style="font-size: 1.8rem; font-weight: 400; text-align: center; margin-bottom: 40px; color: #1a365d;">Writing Samples</h3>
             <div class="writing-samples">
                 <div class="sample-item">
                     <h3 class="sample-title">SERP Domination: How to Leverage Google to Own Your Niche</h3>
                     <p class="sample-type">SEO Strategy Blog Post</p>
-                    <div class="sample-excerpt">
-                        "Ranking on page one is good. Owning the SERP is better. When your brand shows up in featured snippets, People Also Ask boxes, local packs, and organic listings, you do more than get clicks. You build authority."
+                    <div class="full-article">
+                        Ranking on page one is good. Owning the SERP is better. When your brand shows up in featured snippets, People Also Ask boxes, local packs, and organic listings, you do more than get clicks. You build authority.<br><br>
+
+                        <h4>Why SERPs Matter More Than Rankings</h4>
+                        • 75% of users never scroll past the first page<br>
+                        • Featured snippets get 8% more clicks than the top organic result<br>
+                        • Authority content signals expertise and builds trust<br><br>
+
+                        <h4>3 Steps to SERP Domination</h4>
+                        <strong>1. Content Hubs, Not Blog Islands.</strong> Create pillar pages with internal linking clusters. Google recognizes them as authoritative resources.<br><br>
+
+                        <strong>2. Answer Questions Directly.</strong> Format answers in 40 to 60 word blocks to target featured snippets.<br><br>
+
+                        <strong>3. Diversify Formats.</strong> Videos, infographics, and comparison charts often appear in SERP features where plain text cannot.<br><br>
+
+                        SEO is no longer just about ranking for keywords. It is about positioning your brand as the most visible answer to your audience's most important questions.
                     </div>
-                    <p class="sample-description">Strategic SEO content that positions expertise while providing actionable tactics. Focuses on SERP features beyond traditional rankings.</p>
                 </div>
 
                 <div class="sample-item">
                     <h3 class="sample-title">Why the First 90 Days Decide Your SaaS Customer's Lifetime Value</h3>
                     <p class="sample-type">SaaS Industry Blog</p>
-                    <div class="sample-excerpt">
-                        "In SaaS, acquisition is expensive. Churn is deadly. Studies show most cancellations happen within the first 90 days. The real growth driver isn't acquisition. It is retention."
+                    <div class="full-article">
+                        In SaaS, acquisition is expensive. Churn is deadly. Studies show most cancellations happen within the first 90 days. The real growth driver isn't acquisition. It is retention.<br><br>
+
+                        <h4>Why Customers Leave</h4>
+                        • Onboarding is confusing or overwhelming<br>
+                        • Product value isn't communicated early<br>
+                        • Support feels reactive instead of proactive<br><br>
+
+                        <h4>3 Ways to Keep Customers Beyond the Trial Period</h4>
+                        <strong>1. Personalized Onboarding Journeys.</strong> Tailor tutorials and tooltips to user roles instead of sending every customer the same checklist.<br><br>
+
+                        <strong>2. Health Scores That Trigger Action.</strong> Track logins, feature usage, and support tickets. Proactively reach out before a customer goes dark.<br><br>
+
+                        <strong>3. Customer Success as a Growth Driver.</strong> Do more than solve problems. Help customers achieve ROI milestones within their first 30 days.<br><br>
+
+                        A 5% increase in retention can lift profits by 25 to 95 percent. For SaaS, the first 90 days are not a "trial." They are the make-or-break window for your entire business model.
                     </div>
-                    <p class="sample-description">Data-driven content for SaaS companies focusing on customer retention strategies. Combines industry statistics with actionable advice.</p>
                 </div>
 
                 <div class="sample-item">
                     <h3 class="sample-title">4 Proven B2B Lead Generation Strategies That Actually Convert</h3>
                     <p class="sample-type">B2B Marketing</p>
-                    <div class="sample-excerpt">
-                        "B2B marketers face a different challenge than B2C: long sales cycles, multiple decision makers, and the need for trust before purchase. Filling your funnel with qualified leads is far more valuable than filling it with any leads."
+                    <div class="full-article">
+                        B2B marketers face a different challenge than B2C: long sales cycles, multiple decision makers, and the need for trust before purchase. Filling your funnel with qualified leads is far more valuable than filling it with any leads.<br><br>
+
+                        <strong>1. Intent-Based Content Marketing</strong><br>
+                        Instead of chasing broad keywords, focus on "bottom-of-funnel" content like comparison guides, pricing breakdowns, or ROI calculators. These leads are closer to purchase.<br><br>
+
+                        <strong>2. Account-Based Marketing (ABM)</strong><br>
+                        ABM aligns sales and marketing around specific target accounts. Personalized campaigns yield higher engagement and shorten sales cycles.<br><br>
+
+                        <strong>3. LinkedIn as a Demand Gen Machine</strong><br>
+                        LinkedIn is still the number one B2B channel. Use it for thought leadership content, retargeting ads, and lead gen forms.<br><br>
+
+                        <strong>4. Data-Driven Nurturing</strong><br>
+                        Automated workflows should deliver case studies, testimonials, and demos based on prospect behavior. A lead who downloads a whitepaper about compliance does not need the same messaging as one who watches a demo video.<br><br>
+
+                        B2B lead generation is not about volume. It is about relevance.
                     </div>
-                    <p class="sample-description">Strategic marketing content that addresses B2B-specific challenges with practical, implementable solutions.</p>
                 </div>
 
                 <div class="sample-item">
                     <h3 class="sample-title">AI Won't Take Your Job: But Someone Who Knows How to Use It Will</h3>
                     <p class="sample-type">Thought Leadership</p>
-                    <div class="sample-excerpt">
-                        "The conversation around AI often swings between two extremes. Some say 'Robots are coming for us all.' Others dismiss AI as a fad. The truth sits in between. AI won't eliminate jobs across the board, but it will fundamentally change how we work."
+                    <div class="full-article">
+                        The conversation around AI often swings between two extremes. Some say "Robots are coming for us all." Others dismiss AI as a fad. The truth sits in between. AI won't eliminate jobs across the board, but it will fundamentally change how we work. The people who adapt first are the ones who win.<br><br>
+
+                        <h4>The Reality Check</h4>
+                        • 60% of tasks in today's jobs could be at least partially automated<br>
+                        • 85% of jobs in 2030 haven't even been invented yet<br><br>
+
+                        <h4>What That Means for You</h4>
+                        Instead of fearing AI, think of it like the calculator. Accountants didn't disappear when calculators arrived; they leveled up. AI is the new baseline skill.<br><br>
+
+                        <h4>3 Ways to Future-Proof Your Career</h4>
+                        <strong>1. Learn AI-Adjacency.</strong> Even if you're not coding, you should know how to use tools like ChatGPT or MidJourney.<br><br>
+
+                        <strong>2. Double Down on Human Skills.</strong> Empathy, creativity, and leadership cannot be automated.<br><br>
+
+                        <strong>3. Experiment Now.</strong> The people building small AI workflows today will be tomorrow's leaders.
                     </div>
-                    <p class="sample-description">Balanced perspective on AI and future of work. Addresses common fears while providing practical career advice.</p>
                 </div>
 
                 <div class="sample-item">
-                    <h3 class="sample-title">Why 60% of Small Businesses Fail After a Cyberattack</h3>
+                    <h3 class="sample-title">Why 60% of Small Businesses Fail After a Cyberattack: How to Protect Yours</h3>
                     <p class="sample-type">Cybersecurity Content</p>
-                    <div class="sample-excerpt">
-                        "Every 39 seconds, a hacker attempts a breach. For small businesses, the cost of one successful attack averages $25,000 in direct losses. That figure doesn't even include reputational harm. Yet many small business owners still assume, 'We're too small to be a target.'"
+                    <div class="full-article">
+                        Every 39 seconds, a hacker attempts a breach. For small businesses, the cost of one successful attack averages $25,000 in direct losses. That figure doesn't even include reputational harm. Yet many small business owners still assume, "We're too small to be a target." The truth? Hackers know small businesses are the easiest targets.<br><br>
+
+                        <h4>Why Small Businesses Are Targeted</h4>
+                        • Fewer security layers compared to enterprises<br>
+                        • More likely to use outdated software<br>
+                        • Employees often lack cybersecurity training<br><br>
+
+                        <h4>The Real Risk: Beyond the Breach</h4>
+                        <strong>Downtime:</strong> A ransomware attack can freeze operations for days<br><br>
+
+                        <strong>Customer Trust:</strong> A leaked email list can damage reputation instantly<br><br>
+
+                        <strong>Legal & Compliance Costs:</strong> Noncompliance with GDPR, CCPA, or HIPAA adds fines to your losses<br><br>
+
+                        <h4>3 Affordable Ways to Strengthen Security Today</h4>
+                        <strong>1. Adopt MFA (Multi-Factor Authentication).</strong> Most platforms now offer this free tool, which drastically reduces breaches.<br><br>
+
+                        <strong>2. Train Your Employees.</strong> Phishing remains the number one entry point. Quarterly simulations cut risk by 60%.<br><br>
+
+                        <strong>3. Regular Backups.</strong> A secure cloud backup costs as little as $10/month and can save your entire business.<br><br>
+
+                        Cybersecurity is no longer optional. It is survival.
                     </div>
-                    <p class="sample-description">Educational content that uses compelling statistics to grab attention while providing practical security advice for small business owners.</p>
                 </div>
 
                 <div class="sample-item">
-                    <h3 class="sample-title">Stop "Hustling" Yourself Into Burnout</h3>
+                    <h3 class="sample-title">Stop "Hustling" Yourself Into Burnout: 5 Smarter Ways to Get More Done</h3>
                     <p class="sample-type">Productivity & Wellness</p>
-                    <div class="sample-excerpt">
-                        "Let's be real. Nobody brags about working 80-hour weeks anymore. Hustle culture is out, and sustainable productivity is in. The truth? Working more hours doesn't mean you're getting more done."
+                    <div class="full-article">
+                        Let's be real. Nobody brags about working 80-hour weeks anymore. Hustle culture is out, and sustainable productivity is in. The truth? Working more hours doesn't mean you're getting more done. It probably just means you're tired, distracted, and running on caffeine fumes.<br><br>
+
+                        Here's how to flip the script and actually get ahead without burning out.<br><br>
+
+                        <strong>1. Ditch the To-Do List, Use a "Done List"</strong><br>
+                        Logging tasks you finish builds momentum and motivation.<br><br>
+
+                        <strong>2. Time-Box Your Day</strong><br>
+                        Work in 90-minute sprints, then take a 20-minute break. That's how your brain performs best.<br><br>
+
+                        <strong>3. Set Hard Stop Times</strong><br>
+                        You'd be amazed what you can do when you have to shut down at 6pm. Boundaries create efficiency.<br><br>
+
+                        <strong>4. Automate the Boring Stuff</strong><br>
+                        Calendars, reminders, even emails can be outsourced to free tools.<br><br>
+
+                        <strong>5. Rest Like It's a Meeting</strong><br>
+                        Put it on your calendar. No excuses. Rest is fuel, not the opposite of work.<br><br>
+
+                        If you're tired of "working harder" and ready to work smarter, it's time for a change.
                     </div>
-                    <p class="sample-description">Lifestyle content that challenges popular productivity myths while offering practical alternatives. Appeals to professionals seeking work-life balance.</p>
                 </div>
             </div>
         </div>
